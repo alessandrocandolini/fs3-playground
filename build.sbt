@@ -1,12 +1,15 @@
-val scala3Version = "3.0.0"
+import Dependencies._
+import Settings._
 
 lazy val root = project
   .in(file("."))
+  .settings(commonSettings)
   .settings(
-    name := "scala3-simple",
+    name := "fs3-playground",
     version := "0.1.0",
-
-    scalaVersion := scala3Version,
-
-    libraryDependencies += "com.novocode" % "junit-interface" % "0.11" % "test"
+    scalaVersion := Versions.scala,
+    assembly / assemblyJarName := "fs3-playground.jar",
+    assembly / test := (Test / test).value,
+    scalafmtOnCompile := true,
+    libraryDependencies ++= dependencies ++ testDependencies
   )
