@@ -40,7 +40,8 @@ object Dependencies {
 
 object Versions {
 
-  val scala                   = "3.0.1-RC2"
+  //val scala                   = "3.0.1-RC2"
+  val scala                   = "3.0.0"
   val catsCore                = "2.6.1"
   val catsEffect              = "3.1.1"
   val munitCatsEffect         = "1.0.3"
