@@ -20,7 +20,9 @@ enum Erratum derives CanEqual:
 
 def program: IO[Unit] = ioProgram
 
-val f: Stream[IO, String] = Stream.eval(IO.readLine)
+val source: Stream[IO, Int] = ???
+
+val fProgram: Stream[IO, String] = Stream.eval(IO.readLine)
 
 def ioProgram: IO[Unit] = input
   .map(pureProgram)

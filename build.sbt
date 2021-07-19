@@ -9,7 +9,12 @@ lazy val root = project
     version := "0.1.0",
     scalaVersion := Versions.scala,
     assembly / assemblyJarName := "fs3-playground.jar",
-    assembly / test := (Test / test).value,
+    assembly / test := Def
+      .sequential(
+        Test / test,
+        IntegrationTest / test
+      )
+      .value,
     scalafmtOnCompile := true,
     libraryDependencies ++= dependencies ++ testDependencies
   )
