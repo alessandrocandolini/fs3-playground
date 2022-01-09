@@ -1,6 +1,11 @@
-## sbt project compiled with Scala 3
+# fs2 playground in scala 3
 
-### Usage
+Streams are a powerful and expressive abstraction. Persistent stream processors are also gain popularity (eg, kstreams).
+
+fs2 provides a purely functional, effectful, polymorphic library for in-memory resource-safe pull-based stream processing. 
+
+
+## Usage
 
 This is a normal sbt project. You can compile code with `sbt compile`, run it with `sbt run`, and `sbt console` will start a Scala 3 REPL.
 
