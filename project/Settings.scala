@@ -44,13 +44,13 @@ object Dependencies {
 
 object Versions {
 
-  val scala                   = "3.0.1"
-  val catsCore                = "2.6.1"
-  val catsEffect              = "3.2.2"
+  val scala                   = "3.1.1"
+  val catsCore                = "2.7.0"
+  val catsEffect              = "3.3.5"
   val munitCatsEffect         = "1.0.3"
   val scalacheckEffectVersion = "1.0.2"
-  val fs2                     = "3.1.0"
-  val tapir                   = "0.19.0-M4"
+  val fs2                     = "3.2.4"
+  val tapir                   = "0.20.0-M9"
   val scalacheck              = "1.15.4"
 
 }
