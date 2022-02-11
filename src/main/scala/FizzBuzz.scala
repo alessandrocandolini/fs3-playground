@@ -21,11 +21,12 @@ enum FizzBuzz derives CanEqual:
   case Buzz
   case Other(n: Int)
 
-def ioProgram: IO[Unit] = input
-  .map(pureProgram)
-  .value
-  .map(display)
-  .flatMap(IO.println)
+def ioProgram: IO[Unit] =
+  input
+    .map(pureProgram)
+    .value
+    .map(display)
+    .flatMap(IO.println)
 
 val pureProgram: Int => List[String] = n => List.range(0, n).map(fizzbuzzAndRender)
 

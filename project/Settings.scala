@@ -33,7 +33,12 @@ object Dependencies {
     "com.softwaremill.sttp.tapir" %% "tapir-core" % Versions.tapir
   )
 
-  val dependencies = cats ++ fs2 ++ tapir
+  val decline = Seq(
+    "decline-effect",
+    "decline"
+  ).map("com.monovore" %% _ % "2.2.0")
+
+  val dependencies = cats ++ fs2 ++ tapir ++ decline
 
   val testDependencies = Seq(
     "org.scalacheck" %% "scalacheck"          % Versions.scalacheck,
