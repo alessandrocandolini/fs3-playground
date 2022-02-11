@@ -12,7 +12,8 @@ object Settings {
       "-unchecked",
       "-language:strictEquality",
       "-language:postfixOps",
-      "-Yexplicit-nulls"
+      "-Yexplicit-nulls",
+      "-source:future"
     )
   )
 
@@ -33,7 +34,7 @@ object Dependencies {
     "com.softwaremill.sttp.tapir" %% "tapir-core" % Versions.tapir
   )
 
-  val decline = Seq(
+  val decline      = Seq(
     "decline-effect",
     "decline"
   ).map("com.monovore" %% _ % "2.2.0")
